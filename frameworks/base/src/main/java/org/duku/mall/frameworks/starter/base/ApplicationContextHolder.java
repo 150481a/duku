@@ -1,9 +1,8 @@
 package org.duku.mall.frameworks.starter.base;
 
-public class ApplicationContextHolder implements ApplicationContextAware {
+public class ApplicationContextHolder  {
 
 
-    private  static  ApplicationContext  CONTEXT;
 
 
 
