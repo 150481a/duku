@@ -9,13 +9,7 @@
     <version>0.0.1-SNAPSHOT</version>
     <description>duku商城项目</description>
     <packaging>pom</packaging>
-    <modules>
-        <module>frameworks</module>
-        <module>services</module>
-        <module>dependencies</module>
-        <module>tests</module>
-        <module>tests/general</module>
-    </modules>
+
 
     <properties>
         <java.version>17</java.version>
@@ -26,6 +20,13 @@
         <maven.compiler.target>17</maven.compiler.target>
         <lombok.version>1.18.36</lombok.version>
     </properties>
+
+    <modules>
+        <module>frameworks</module>
+        <module>services</module>
+        <module>dependencies</module>
+        <module>tests</module>
+    </modules>
 
     <dependencies>
         <dependency>
@@ -92,7 +93,7 @@
                 <configuration>
                     <java>
                         <!--<eclipse>
-                            <file>${maven.multiModuleProjectDirectory}/format/12306_spotless_formatter.xml</file>
+                            <file>${maven.multiModuleProjectDirectory}/format/duku_spotless_formatter.xml</file>
                         </eclipse>-->
                         <licenseHeader>
                             <!-- ${maven.multiModuleProjectDirectory} 爆红属于正常，并不影响编译或者运行，忽略就好 -->
@@ -116,11 +117,11 @@
                 <version>${maven-common-plugin.version}</version>
                 <configuration>
                     <!-- ${maven.multiModuleProjectDirectory} 爆红属于正常，并不影响编译或者运行，忽略就好 -->
-                    <configLocation>${maven.multiModuleProjectDirectory}/checkstyle/12306_checkstyle.xml
+                    <configLocation>${maven.multiModuleProjectDirectory}/checkstyle/duku_checkstyle.xml
                     </configLocation>
                     <!-- ${maven.multiModuleProjectDirectory} 爆红属于正常，并不影响编译或者运行，忽略就好 -->
                     <suppressionsLocation>
-                        ${maven.multiModuleProjectDirectory}/checkstyle/12306_checkstyle_suppression.xml
+                        ${maven.multiModuleProjectDirectory}/checkstyle/duku_checkstyle_suppression.xml
                     </suppressionsLocation>
                     <!-- Do not scan the test directory for now -->
                     <includeTestSourceDirectory>false</includeTestSourceDirectory>

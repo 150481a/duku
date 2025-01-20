@@ -3,6 +3,7 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+
     <groupId>org.duku.mall</groupId>
     <artifactId>duku-dependencies</artifactId>
     <version>0.0.1-SNAPSHOT</version>
@@ -14,7 +15,7 @@
         <spring-cloud-alibaba.version>2023.0.1.2</spring-cloud-alibaba.version>
         <mybatis-spring-boot-starter.version>3.0.4</mybatis-spring-boot-starter.version>
 
-        <jjwt.version>0.12.6</jjwt.version>
+        <jjwt.version>0.9.1</jjwt.version>
         <fastjson2.version>2.0.53</fastjson2.version>
         <mybatis-plus.version>3.5.9</mybatis-plus.version>
         <dozer-core.version>7.7.0</dozer-core.version>
@@ -134,6 +135,11 @@
                 <groupId>cn.hutool</groupId>
                 <artifactId>hutool-all</artifactId>
                 <version>${hutool-all.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-text</artifactId>
+                <version>${commons-text.version}</version>
             </dependency>
 
             <dependency>

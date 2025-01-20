@@ -11,6 +11,7 @@
 
     <artifactId>duku-frameworks</artifactId>
     <packaging>pom</packaging>
+
     <modules>
         <module>common</module>
         <module>bizs</module>
