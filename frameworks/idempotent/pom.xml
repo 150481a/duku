@@ -10,7 +10,26 @@
     </parent>
 
     <artifactId>duku-idempotent-spring-boot-starter</artifactId>
-
+    <dependencies>
+        <dependency>
+            <groupId>org.duku.mall</groupId>
+            <artifactId>duku-cache-spring-boot-starter</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.duku.mall</groupId>
+            <artifactId>duku-user-spring-boot-starter</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.duku.mall</groupId>
+            <artifactId>duku-convention-spring-boot-starter</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
 
 
 </project>
