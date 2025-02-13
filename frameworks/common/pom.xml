@@ -10,7 +10,25 @@
     </parent>
 
     <artifactId>duku-common-spring-boot-starter</artifactId>
+    <dependencies>
+        <dependency>
+            <groupId>org.duku.mall</groupId>
+            <artifactId>duku-base-spring-boot-starter</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
 
+        <dependency>
+            <groupId>com.github.dozermapper</groupId>
+            <artifactId>dozer-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.duku.mall</groupId>
+            <artifactId>duku-designpattern-spring-boot-starter</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
 
 
 </project>
