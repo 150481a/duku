@@ -1,5 +1,18 @@
 package org.duku.mall.frameworks.starter.user.core;
 
+import com.alibaba.ttl.TransmittableThreadLocal;
+import com.google.gson.Gson;
+import io.jsonwebtoken.Claims;
+import io.jsonwebtoken.Jwts;
+import io.micrometer.common.util.StringUtils;
+import jakarta.servlet.http.HttpServletRequest;
+import org.duku.mall.frameworks.starter.cache.CachePrefix;
+import org.duku.mall.frameworks.starter.cache.SingletonCache;
+import org.duku.mall.frameworks.starter.user.core.enums.SecurityEnum;
+import org.duku.mall.frameworks.starter.user.toolkit.JWTUtil;
+import org.springframework.web.context.request.RequestContextHolder;
+import org.springframework.web.context.request.ServletRequestAttributes;
+
 import java.util.Optional;
 
 /**
@@ -17,6 +30,20 @@ public class UserContext {
      */
     public static void setUser(UserInfoDTO user) {
         USER_THREAD_LOCAL.set(user);
+    }
+
+    /**
+     * 根据request获取用户信息
+     *
+     * @return 授权用户
+     */
+    public static UserInfoDTO getCurrentUser() {
+        if (RequestContextHolder.getRequestAttributes() != null) {
+            HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
+            String accessToken = request.getHeader(SecurityEnum.HEADER_TOKEN.getValue());
+            return JWTUtil.parseJwtToken(accessToken);
+        }
+        return null;
     }
 
     /**
@@ -57,6 +84,36 @@ public class UserContext {
     public static String getToken() {
         UserInfoDTO userInfoDTO = USER_THREAD_LOCAL.get();
         return Optional.ofNullable(userInfoDTO).map(UserInfoDTO::getToken).orElse(null);
+    }
+
+
+//    public static UserInfoDTO getAuthUser(String accessToken) {
+//        try {
+//            //获取token的信息
+//            Claims claims
+//                    = Jwts.parser()
+//                    .setSigningKey(SecretKeyUtil.generalKeyByDecoders())
+//                    .parseClaimsJws(accessToken).getBody();
+//            //获取存储在claims中的用户信息
+//            String json = claims.get(SecurityEnum.USER_CONTEXT.getValue()).toString();
+//            return new Gson().fromJson(json, UserInfoDTO.class);
+//        } catch (Exception e) {
+//            return null;
+//        }
+//    }
+
+    /**
+     * 写入邀请人信息
+     */
+    public static void settingInviter(String memberId, SingletonCache cache) {
+        if (RequestContextHolder.getRequestAttributes() != null) {
+            HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
+            //邀请人id
+            String inviterId = request.getHeader(SecurityEnum.INVITER.getValue());
+            if (StringUtils.isNotEmpty(inviterId)) {
+                cache.put(CachePrefix.INVITER.getPrefix() + memberId, inviterId);
+            }
+        }
     }
 
     /**

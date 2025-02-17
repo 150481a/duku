@@ -19,6 +19,7 @@ package org.duku.mall.framework.starter.idempotent.core.token;
 
 import lombok.RequiredArgsConstructor;
 import org.duku.mall.framework.starter.convention.result.Result;
+import org.duku.mall.framework.starter.web.Results;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 

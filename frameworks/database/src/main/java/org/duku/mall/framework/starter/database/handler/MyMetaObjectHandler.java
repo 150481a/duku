@@ -19,6 +19,7 @@ package org.duku.mall.framework.starter.database.handler;
 
 import com.baomidou.mybatisplus.core.handlers.MetaObjectHandler;
 import org.apache.ibatis.reflection.MetaObject;
+import org.duku.mall.frameworks.starter.common.enums.DelEnum;
 
 import java.util.Date;
 

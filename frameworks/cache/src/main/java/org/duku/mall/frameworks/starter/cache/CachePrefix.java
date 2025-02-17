@@ -1,5 +1,8 @@
 package org.duku.mall.frameworks.starter.cache;
 
+
+import org.duku.mall.framework.starter.convention.enums.PromotionTypeEnum;
+import org.duku.mall.framework.starter.convention.enums.UserEnums;
 /**
  * 缓存前缀
  */
