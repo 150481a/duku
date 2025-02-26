@@ -44,6 +44,10 @@ public class ServiceException extends AbstractException {
         this(message, null, errorCode);
     }
 
+    public ServiceException(String message, Throwable throwable) {
+        this(message, throwable, BaseErrorCode.SERVICE_ERROR);
+    }
+
     public ServiceException(String message, Throwable throwable, IErrorCode errorCode) {
         super(Optional.ofNullable(message).orElse(errorCode.message()), throwable, errorCode);
     }

@@ -22,6 +22,7 @@ import cn.hutool.crypto.digest.DigestUtil;
 import com.alibaba.fastjson2.JSON;
 import lombok.RequiredArgsConstructor;
 import org.aspectj.lang.ProceedingJoinPoint;
+import org.duku.mall.framework.starter.convention.exception.ClientException;
 import org.duku.mall.framework.starter.idempotent.core.AbstractIdempotentExecuteHandler;
 import org.duku.mall.framework.starter.idempotent.core.IdempotentContext;
 import org.duku.mall.framework.starter.idempotent.core.IdempotentParamWrapper;

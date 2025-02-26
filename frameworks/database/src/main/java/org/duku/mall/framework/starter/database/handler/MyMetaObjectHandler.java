@@ -19,7 +19,10 @@ package org.duku.mall.framework.starter.database.handler;
 
 import com.baomidou.mybatisplus.core.handlers.MetaObjectHandler;
 import org.apache.ibatis.reflection.MetaObject;
+import org.duku.mall.framework.starter.distributedid.toolkit.SnowflakeIdUtil;
 import org.duku.mall.frameworks.starter.common.enums.DelEnum;
+import org.duku.mall.frameworks.starter.user.core.UserContext;
+import org.duku.mall.frameworks.starter.user.core.UserInfoDTO;
 
 import java.util.Date;
 
@@ -28,25 +31,40 @@ import java.util.Date;
  */
 public class MyMetaObjectHandler implements MetaObjectHandler {
 
-    /**
-     * 数据新增时填充
-     *
-     * @param metaObject
-     */
     @Override
     public void insertFill(MetaObject metaObject) {
-        this.strictInsertFill(metaObject, "createTime", Date.class, new Date());
-        this.strictInsertFill(metaObject, "updateTime", Date.class, new Date());
-        this.strictInsertFill(metaObject, "delFlag", Integer.class, DelEnum.NORMAL.code());
+        UserInfoDTO authUser = UserContext.getCurrentUser();
+        if (authUser != null) {
+            this.setFieldValByName("createBy", authUser.getUsername(), metaObject);
+        } else {
+
+            this.setFieldValByName("createBy", "SYSTEM", metaObject);
+        }
+        //有创建时间字段，切字段值为空
+        if (metaObject.hasGetter("createTime")) {
+            this.setFieldValByName("createTime", new Date(), metaObject);
+        }
+        //有值，则写入
+        if (metaObject.hasGetter("deleteFlag")) {
+            if (metaObject.getValue("deleteFlag") == null) {
+                this.setFieldValByName("deleteFlag", false, metaObject);
+            }
+        }
+        if (metaObject.hasGetter("id")) {
+            //如果已经配置id，则不再写入
+            if (metaObject.getValue("id") == null) {
+                this.setFieldValByName("id", String.valueOf(SnowflakeIdUtil.nextId()), metaObject);
+            }
+        }
     }
 
-    /**
-     * 数据修改时填充
-     *
-     * @param metaObject
-     */
     @Override
     public void updateFill(MetaObject metaObject) {
-        this.strictInsertFill(metaObject, "updateTime", Date.class, new Date());
+
+        UserInfoDTO authUser = UserContext.getCurrentUser();
+        if (authUser != null) {
+            this.setFieldValByName("updateBy", authUser.getUsername(), metaObject);
+        }
+        this.setFieldValByName("updateTime", new Date(), metaObject);
     }
 }

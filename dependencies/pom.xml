@@ -37,11 +37,10 @@
         <jasypt-version>3.0.4</jasypt-version>
         <neetl-version>2.9.10</neetl-version>
         <!-- 阿里云相关依赖 -->
-        <alipay-sdk-java.version>4.38.10.ALL</alipay-sdk-java.version>
+        <alipay-sdk-java-version>4.38.10.ALL</alipay-sdk-java-version>
         <aliyun-version>4.7.0</aliyun-version>
         <aliyun-sdk-oss-version>3.18.1</aliyun-sdk-oss-version>
         <aliyun-sdk-dysms-version>2.0.9</aliyun-sdk-dysms-version>
-
 
         <shardingsphere.version>5.3.2</shardingsphere.version>
         <druid-version>1.2.16</druid-version>
@@ -67,7 +66,8 @@
         <cos.version>5.6.97</cos.version>
         <tencentcloud.version>3.1.693</tencentcloud.version>
         <kuaidi100-api.version>1.0.11</kuaidi100-api.version>
-
+        <springfox.version>3.0.0</springfox.version>
+        <elasticsearch.version>7.17.21</elasticsearch.version>
     </properties>
 
     <dependencyManagement>
@@ -214,6 +214,50 @@
                 <artifactId>owasp-java-html-sanitizer</artifactId>
                 <version>${owasp-java-html-sanitizer}</version>
             </dependency>
+
+            <dependency>
+                <groupId>eu.bitwalker</groupId>
+                <artifactId>UserAgentUtils</artifactId>
+                <version>${userAgentUtils}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.alipay.sdk</groupId>
+                <artifactId>alipay-sdk-java</artifactId>
+                <version>${alipay-sdk-java-version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-boot-starter</artifactId>
+                <version>${springfox.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.elasticsearch.client</groupId>
+                <artifactId>elasticsearch-rest-high-level-client</artifactId>
+                <version>${elasticsearch.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-annotation</artifactId>
+                <version>${mybatis-plus.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-jsqlparser</artifactId>
+                <version>${mybatis-plus.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.xkcoding.http</groupId>
+                <artifactId>simple-http</artifactId>
+                <version>${simple-http-version}</version>
+            </dependency>
+
+
+
         </dependencies>
     </dependencyManagement>
 
