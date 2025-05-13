@@ -3,7 +3,7 @@ package org.duku.mall.framework.starter.distributedid.config;
 
 import org.duku.mall.framework.starter.distributedid.core.snowflake.LocalRedisWorkIdChoose;
 import org.duku.mall.framework.starter.distributedid.core.snowflake.RandomWorkIdChoose;
-import org.duku.mall.frameworks.starter.bases.ApplicationContextHolder;
+import org.duku.mall.framework.starter.bases.ApplicationContextHolder;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Bean;

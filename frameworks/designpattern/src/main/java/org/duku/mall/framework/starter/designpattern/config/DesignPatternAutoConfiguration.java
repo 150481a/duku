@@ -2,7 +2,7 @@ package org.duku.mall.framework.starter.designpattern.config;
 
 import org.duku.mall.framework.starter.designpattern.chain.AbstractChainContext;
 import org.duku.mall.framework.starter.designpattern.strategy.AbstractStrategyChoose;
-import org.duku.mall.frameworks.starter.bases.config.ApplicationBaseAutoConfiguration;
+import org.duku.mall.framework.starter.bases.config.ApplicationBaseAutoConfiguration;
 import org.springframework.boot.autoconfigure.ImportAutoConfiguration;
 import org.springframework.context.annotation.Bean;
 

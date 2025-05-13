@@ -26,7 +26,7 @@ import org.duku.mall.framework.starter.idempotent.core.spel.IdempotentSpELServic
 import org.duku.mall.framework.starter.idempotent.core.token.IdempotentTokenController;
 import org.duku.mall.framework.starter.idempotent.core.token.IdempotentTokenExecuteHandler;
 import org.duku.mall.framework.starter.idempotent.core.token.IdempotentTokenService;
-import org.duku.mall.frameworks.starter.cache.DistributedCache;
+import org.duku.mall.framework.starter.cache.DistributedCache;
 import org.redisson.api.RedissonClient;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;

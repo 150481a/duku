@@ -22,6 +22,8 @@ import org.duku.mall.framework.starter.distributedid.core.snowflake.Snowflake;
 import org.duku.mall.framework.starter.distributedid.core.snowflake.SnowflakeIdInfo;
 import org.duku.mall.framework.starter.distributedid.handler.IdGeneratorManager;
 
+import java.util.Date;
+
 /**
  * 分布式雪花 ID 生成器
  */
@@ -58,6 +60,16 @@ public final class SnowflakeIdUtil {
      */
     public static String nextIdStr() {
         return Long.toString(nextId());
+    }
+
+    /**
+     * 生成字符，带有前缀
+     *
+     * @param prefix
+     * @return
+     */
+    public static String createStr(String prefix) {
+        return prefix + DateUtil.toString(new Date(), "yyyyMMdd") + nextId();
     }
 
     /**

@@ -21,7 +21,7 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import org.duku.mall.framework.starter.convention.page.PageRequest;
 import org.duku.mall.framework.starter.convention.page.PageResponse;
-import org.duku.mall.frameworks.starter.common.toolkit.BeanUtil;
+import org.duku.mall.framework.starter.common.toolkit.BeanUtil;
 
 import java.util.List;
 import java.util.function.Function;

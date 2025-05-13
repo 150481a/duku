@@ -15,4 +15,4 @@
 # limitations under the License.
 #
 
-org.duku.mall.frameworks.starter.bases.config.ApplicationBaseAutoConfiguration
+org.duku.mall.framework.starter.bases.config.ApplicationBaseAutoConfiguration

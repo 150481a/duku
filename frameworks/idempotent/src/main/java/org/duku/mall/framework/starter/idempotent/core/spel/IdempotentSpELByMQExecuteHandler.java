@@ -26,7 +26,7 @@ import org.duku.mall.framework.starter.idempotent.core.*;
 import org.duku.mall.framework.starter.idempotent.enums.IdempotentMQConsumeStatusEnum;
 import org.duku.mall.framework.starter.idempotent.toolkit.LogUtil;
 import org.duku.mall.framework.starter.idempotent.toolkit.SpELUtil;
-import org.duku.mall.frameworks.starter.cache.DistributedCache;
+import org.duku.mall.framework.starter.cache.DistributedCache;
 import org.springframework.data.redis.core.StringRedisTemplate;
 
 import java.util.concurrent.TimeUnit;

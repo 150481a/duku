@@ -18,7 +18,7 @@
 package org.duku.mall.framework.starter.idempotent.config;
 
 import lombok.Data;
-import org.duku.mall.frameworks.starter.cache.config.RedisDistributedProperties;
+import org.duku.mall.framework.starter.cache.config.RedisDistributedProperties;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
 import java.util.concurrent.TimeUnit;

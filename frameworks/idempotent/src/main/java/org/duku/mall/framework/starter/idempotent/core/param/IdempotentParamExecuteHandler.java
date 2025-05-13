@@ -26,7 +26,7 @@ import org.duku.mall.framework.starter.convention.exception.ClientException;
 import org.duku.mall.framework.starter.idempotent.core.AbstractIdempotentExecuteHandler;
 import org.duku.mall.framework.starter.idempotent.core.IdempotentContext;
 import org.duku.mall.framework.starter.idempotent.core.IdempotentParamWrapper;
-import org.duku.mall.frameworks.starter.user.core.UserContext;
+import org.duku.mall.framework.starter.user.core.UserContext;
 import org.redisson.api.RLock;
 import org.redisson.api.RedissonClient;
 import org.springframework.web.context.request.RequestContextHolder;

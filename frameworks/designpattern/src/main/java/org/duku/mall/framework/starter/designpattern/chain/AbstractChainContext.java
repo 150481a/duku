@@ -1,6 +1,6 @@
 package org.duku.mall.framework.starter.designpattern.chain;
 
-import org.duku.mall.frameworks.starter.bases.ApplicationContextHolder;
+import org.duku.mall.framework.starter.bases.ApplicationContextHolder;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.core.Ordered;
 import org.springframework.util.CollectionUtils;

@@ -27,7 +27,7 @@ import org.duku.mall.framework.starter.convention.exception.ClientException;
 import org.duku.mall.framework.starter.idempotent.config.IdempotentProperties;
 import org.duku.mall.framework.starter.idempotent.core.AbstractIdempotentExecuteHandler;
 import org.duku.mall.framework.starter.idempotent.core.IdempotentParamWrapper;
-import org.duku.mall.frameworks.starter.cache.DistributedCache;
+import org.duku.mall.framework.starter.cache.DistributedCache;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 

@@ -24,7 +24,7 @@ import org.duku.mall.framework.starter.idempotent.core.spel.IdempotentSpELByRest
 import org.duku.mall.framework.starter.idempotent.core.token.IdempotentTokenService;
 import org.duku.mall.framework.starter.idempotent.enums.IdempotentSceneEnum;
 import org.duku.mall.framework.starter.idempotent.enums.IdempotentTypeEnum;
-import org.duku.mall.frameworks.starter.bases.ApplicationContextHolder;
+import org.duku.mall.framework.starter.bases.ApplicationContextHolder;
 
 /**
  * 幂等执行处理器工厂

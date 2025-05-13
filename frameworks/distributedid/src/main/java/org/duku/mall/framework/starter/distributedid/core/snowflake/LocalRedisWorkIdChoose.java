@@ -2,7 +2,7 @@ package org.duku.mall.framework.starter.distributedid.core.snowflake;
 
 import cn.hutool.core.collection.CollUtil;
 import lombok.extern.slf4j.Slf4j;
-import org.duku.mall.frameworks.starter.bases.ApplicationContextHolder;
+import org.duku.mall.framework.starter.bases.ApplicationContextHolder;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.data.redis.core.RedisTemplate;

@@ -20,9 +20,8 @@ package org.duku.mall.framework.starter.database.handler;
 import com.baomidou.mybatisplus.core.handlers.MetaObjectHandler;
 import org.apache.ibatis.reflection.MetaObject;
 import org.duku.mall.framework.starter.distributedid.toolkit.SnowflakeIdUtil;
-import org.duku.mall.frameworks.starter.common.enums.DelEnum;
-import org.duku.mall.frameworks.starter.user.core.UserContext;
-import org.duku.mall.frameworks.starter.user.core.UserInfoDTO;
+import org.duku.mall.framework.starter.user.core.UserContext;
+import org.duku.mall.framework.starter.user.core.UserInfoDTO;
 
 import java.util.Date;
 

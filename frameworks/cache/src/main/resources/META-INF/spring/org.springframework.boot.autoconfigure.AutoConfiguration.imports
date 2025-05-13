@@ -15,4 +15,4 @@
 # limitations under the License.
 #
 
-org.duku.mall.frameworks.starter.cache.config.CacheAutoConfiguration
+org.duku.mall.framework.starter.cache.config.CacheAutoConfiguration

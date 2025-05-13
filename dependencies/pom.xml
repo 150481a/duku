@@ -68,6 +68,7 @@
         <kuaidi100-api.version>1.0.11</kuaidi100-api.version>
         <springfox.version>3.0.0</springfox.version>
         <elasticsearch.version>7.17.21</elasticsearch.version>
+        <bcprov-version>1.70</bcprov-version>
     </properties>
 
     <dependencyManagement>
@@ -254,6 +255,40 @@
                 <groupId>com.xkcoding.http</groupId>
                 <artifactId>simple-http</artifactId>
                 <version>${simple-http-version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.bouncycastle</groupId>
+                <artifactId>bcprov-jdk15on</artifactId>
+                <version>${bcprov-version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.google.zxing</groupId>
+                <artifactId>core</artifactId>
+                <version>${zxing}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.google.zxing</groupId>
+                <artifactId>javase</artifactId>
+                <version>${zxing}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.xkzhangsan</groupId>
+                <artifactId>xk-time</artifactId>
+                <version>${xk-time}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.aliyun</groupId>
+                <artifactId>dysmsapi20170525</artifactId>
+                <version>${aliyun-sdk-dysms-version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.tencentcloudapi</groupId>
+                <artifactId>tencentcloud-sdk-java</artifactId>
+                <version>${tencentcloud.version}</version>
             </dependency>
 
 

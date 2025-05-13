@@ -28,7 +28,7 @@ public class ResultMessage<T> implements Serializable {
     /**
      * 返回代码
      */
-    private Integer code;
+    private String code;
 
     /**
      * 时间戳
